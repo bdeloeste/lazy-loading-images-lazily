@@ -5,6 +5,7 @@
     "rules": {
       "forin": false,
       "interface-name": [true, "never-prefix"],
+      "ordered-imports": false,
       "member-ordering": [
         true,
         {
