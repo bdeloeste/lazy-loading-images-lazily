@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Block } from 'jsxstyle'
+import li from 'lorem-ipsum'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+import Header from './Header'
+import Article from './Article'
+
+const App = () => {
+  return (
+    <Block
+      component="main"
+      margin="0 auto"
+      max-width="42rem"
+      height="100vh"
+      padding="2.625rem 1.3125rem"
+      overflow="hidden"
+    >
+      <Header text="IPAs ftw" />
+      <Article>
+        <p>
+          {li({ count: 50, units: 'sentences' })}
+        </p>
+        <p>
+          {li({ count: 50, units: 'sentences' })}
+        </p>
+      </Article>
+    </Block>
+  )
 }
 
 export default App;
