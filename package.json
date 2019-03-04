@@ -4,19 +4,27 @@
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.9",
+    "@types/lorem-ipsum": "^1.0.2",
     "@types/node": "11.10.4",
     "@types/react": "16.8.6",
     "@types/react-dom": "16.8.2",
+    "jsxstyle": "^2.1.5",
+    "lorem-ipsum": "^1.0.6",
+    "prettier": "^1.16.4",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-scripts": "2.1.5",
+    "tslint": "^5.13.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^3.6.0",
     "typescript": "3.3.3333"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tslint-fix-all": "find . -type f -name 'tsconfig.json' -not -path '*/node_modules/*' -exec echo {} \\; -exec tslint -p {} \\;"
   },
   "eslintConfig": {
     "extends": "react-app"
