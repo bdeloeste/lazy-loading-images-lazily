@@ -38,7 +38,6 @@ const App = () => {
       margin="0 auto"
       max-width="42rem"
       height="100vh"
-      padding="2.625rem 1.3125rem"
       overflow="hidden"
     >
       <Header text="IPAs ftw" />
