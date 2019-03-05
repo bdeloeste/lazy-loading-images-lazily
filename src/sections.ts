@@ -60,6 +60,36 @@ const sections: Section[] = [
     },
     tag: 'p',
   },
+  {
+    id: 8,
+    props: {
+      'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-Houblon-970x650.jpg',
+      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+    },
+    tag: 'img',
+  },
+  {
+    id: 9,
+    props: {
+      children: li({ count: 10, units: 'sentences' })
+    },
+    tag: 'p',
+  },
+  {
+    id: 10,
+    props: {
+      'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-De-Dolle-970x650.jpg',
+      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+    },
+    tag: 'img',
+  },
+  {
+    id: 11,
+    props: {
+      children: li({ count: 10, units: 'sentences' })
+    },
+    tag: 'p',
+  },
 ]
 
 export default sections
