@@ -7,7 +7,7 @@ interface Section {
   props: object
 }
 
-const defaultSections: Section[] = [
+const sections: Section[] = [
   {
     id: 1,
     props: {
@@ -18,7 +18,8 @@ const defaultSections: Section[] = [
   {
     id: 2,
     props: {
-      src: 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_CentennialIPA_Featured_FW.jpg',
+      'data-src': 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_CentennialIPA_Featured_FW.jpg',
+      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
     },
     tag: 'img',
   },
@@ -32,7 +33,8 @@ const defaultSections: Section[] = [
   {
     id: 4,
     props: {
-      src: 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-Lead-1440.jpg',
+      'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-Lead-1440.jpg',
+      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
     },
     tag: 'img',
   },
@@ -46,7 +48,8 @@ const defaultSections: Section[] = [
   {
     id: 6,
     props: {
-      src: 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_AllDayIPA_Featured_FW.jpg',
+      'data-src': 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_AllDayIPA_Featured_FW.jpg',
+      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
     },
     tag: 'img',
   },
@@ -59,4 +62,4 @@ const defaultSections: Section[] = [
   },
 ]
 
-export default defaultSections
+export default sections

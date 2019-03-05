@@ -1,12 +1,37 @@
-import React, { useState } from "react"
-import { Block } from "jsxstyle"
+import React, { useEffect, useRef } from 'react'
+import { Block } from 'jsxstyle'
 
-import Header from "./Header"
-import Article from "./Article"
-import defaultSections from './sections'
+import Header from './Header'
+import Article from './Article'
+import sections from './sections'
+import { preloadImage } from './utils'
+
+const config = {
+  rootMargin: '0px 0px 50px 0px',
+  threshold: 0.2,
+}
 
 const App = () => {
-  const [sections, setSections] = useState(defaultSections)
+  const singleRefs = sections.reduce((acc, value) => {
+    acc[value.id] = useRef()
+    return acc 
+  }, {} as Record<number, React.MutableRefObject<any>>)
+
+  const observer = new IntersectionObserver((entries, self) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.target.tagName === 'IMG') {
+        preloadImage(entry.target as HTMLImageElement)
+        self.unobserve(entry.target)
+      }
+    })
+  }, config)
+
+  useEffect(() => {
+    Object.values(singleRefs).forEach(value => {
+      observer.observe(value.current)
+    })
+  })
+
   return (
     <Block
       component="main"
@@ -22,6 +47,7 @@ const App = () => {
           <section key={id}>
             {React.createElement(tag, {
               ...props,
+              ref: singleRefs[id]
             })}
           </section>
         ))}
