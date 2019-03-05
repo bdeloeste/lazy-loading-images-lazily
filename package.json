@@ -8,6 +8,7 @@
     "@types/node": "11.10.4",
     "@types/react": "16.8.6",
     "@types/react-dom": "16.8.2",
+    "intersection-observer": "^0.5.1",
     "jsxstyle": "^2.1.5",
     "lorem-ipsum": "^1.0.6",
     "prettier": "^1.16.4",

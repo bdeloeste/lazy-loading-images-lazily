@@ -1,3 +1,4 @@
+import 'intersection-observer'
 import React, { useEffect, useRef } from 'react'
 import { Block } from 'jsxstyle'
 
