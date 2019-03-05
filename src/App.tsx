@@ -1,11 +1,12 @@
-import React from 'react'
-import { Block } from 'jsxstyle'
-import li from 'lorem-ipsum'
+import React, { useState } from "react"
+import { Block } from "jsxstyle"
 
-import Header from './Header'
-import Article from './Article'
+import Header from "./Header"
+import Article from "./Article"
+import defaultSections from './sections'
 
 const App = () => {
+  const [sections, setSections] = useState(defaultSections)
   return (
     <Block
       component="main"
@@ -17,15 +18,16 @@ const App = () => {
     >
       <Header text="IPAs ftw" />
       <Article>
-        <p>
-          {li({ count: 50, units: 'sentences' })}
-        </p>
-        <p>
-          {li({ count: 50, units: 'sentences' })}
-        </p>
+        {sections.map(({ id, props, tag }) => (
+          <section key={id}>
+            {React.createElement(tag, {
+              ...props,
+            })}
+          </section>
+        ))}
       </Article>
     </Block>
   )
 }
 
-export default App;
+export default App
