@@ -7,6 +7,8 @@ interface Section {
   props: object
 }
 
+const LOADING_PLACEHOLDER = 'https://via.placeholder.com/728x400.png?text=Loading...'
+
 const sections: Section[] = [
   {
     id: 1,
@@ -19,7 +21,7 @@ const sections: Section[] = [
     id: 2,
     props: {
       'data-src': 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_CentennialIPA_Featured_FW.jpg',
-      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+      src: LOADING_PLACEHOLDER,
     },
     tag: 'img',
   },
@@ -34,7 +36,7 @@ const sections: Section[] = [
     id: 4,
     props: {
       'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-Lead-1440.jpg',
-      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+      src: LOADING_PLACEHOLDER,
     },
     tag: 'img',
   },
@@ -49,7 +51,7 @@ const sections: Section[] = [
     id: 6,
     props: {
       'data-src': 'https://foundersbrewing.com/wp-content/uploads/2017/08/2018_AllDayIPA_Featured_FW.jpg',
-      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+      src: LOADING_PLACEHOLDER,
     },
     tag: 'img',
   },
@@ -64,7 +66,7 @@ const sections: Section[] = [
     id: 8,
     props: {
       'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-Houblon-970x650.jpg',
-      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+      src: LOADING_PLACEHOLDER,
     },
     tag: 'img',
   },
@@ -79,7 +81,7 @@ const sections: Section[] = [
     id: 10,
     props: {
       'data-src': 'https://cdn.gearpatrol.com/wp-content/uploads/2017/08/Belgian-IPAs-Gear-Patrol-De-Dolle-970x650.jpg',
-      src: 'https://via.placeholder.com/728x400.png?text=Loading...',
+      src: LOADING_PLACEHOLDER,
     },
     tag: 'img',
   },
