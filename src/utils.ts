@@ -1,5 +1,5 @@
 export const preloadImage = (image: HTMLImageElement) => {
-  const src = image.getAttribute('data-src')
+  const src = image.dataset.src
   if (!src) {
     return
   }
